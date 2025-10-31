@@ -111,6 +111,18 @@
     </div>
   </div>
 
+  <!-- VIDEO SECTION -->
+            <div class="video-container">
+                <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Watch Our Latest Collection</h2>
+                <div class="video-wrapper">
+                    <!-- REPLACE THIS WITH YOUR GOOGLE DRIVE VIDEO EMBED CODE -->
+                    <iframe src="https://drive.google.com/file/d/1XTcwpnCZ6Ojp-oGBeqq48DV9oQ25xoeP/preview" 
+                            allow="autoplay" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
   <!-- Interactive p5.js background -->
   <script>
     let balls = [];
