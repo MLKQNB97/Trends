@@ -18,7 +18,6 @@
       font-family: 'Futura', sans-serif;
       background-color: #c6b0f3;
       color: #000000;
-      overflow: hidden;
     }
 
     .container {
@@ -80,11 +79,66 @@
       margin-bottom: 30px;
     }
 
+    .video-container {
+      position: relative;
+      z-index: 10;
+      width: 45%;
+      max-width: 600px;
+    }
+
+    .video-container h2 {
+      color: #ffffff;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     canvas {
       position: fixed;
       top: 0;
       left: 0;
       z-index: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        padding: 40px;
+      }
+
+      .left-content,
+      .video-container {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .title {
+        font-size: 80px;
+      }
+
+      .video-container {
+        margin-top: 40px;
+      }
     }
   </style>
 </head>
@@ -109,19 +163,18 @@
         THE FINDINGS REVEALED THAT 37.4% OF EXPERTS CONSIDER AR & INTERACTIVE DESIGN MOST EFFECTIVE, WHILE 40.8% IDENTIFIED SOUND & MUSIC AS THE MOST IMPACTFUL ELEMENT. 28.4% OF CONSUMERS EXPERIENCE BRAND IDENTITY THROUGH AESTHETIC DESIGN.
       </p>
     </div>
-  </div>
 
-  <!-- VIDEO SECTION -->
-            <div class="video-container">
-                <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Watch Our Latest Collection</h2>
-                <div class="video-wrapper">
-                    <!-- REPLACE THIS WITH YOUR GOOGLE DRIVE VIDEO EMBED CODE -->
-                    <iframe src="https://drive.google.com/file/d/1XTcwpnCZ6Ojp-oGBeqq48DV9oQ25xoeP/preview" 
-                            allow="autoplay" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
+    <!-- VIDEO SECTION -->
+    <div class="video-container">
+      <h2>Start</h2>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1XTcwpnCZ6Ojp-oGBeqq48DV9oQ25xoeP/preview" 
+                allow="autoplay" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- Interactive p5.js background -->
   <script>
